@@ -10,5 +10,27 @@
         "sourceType": "module"
     },
     "plugins": ["@typescript-eslint"],
-    "rules": {}
+    "rules": {
+        "indent": "off",
+        "implicit-arrow-linebreak": "off",
+        "function-paren-newline": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "no-console": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }

@@ -16,14 +16,15 @@ dotenv.config({
  */
 class Server {
     public app = express();
+
     public router = MasterRouter;
 }
 
 // initialize server app
 const server = new Server();
 server.app.use(
-    morgan((tokens, req, res) => {
-        return [
+    morgan((tokens, req, res) =>
+        [
             tokens.method(req, res),
             tokens.url(req, res),
             tokens.status(req, res),
@@ -31,8 +32,8 @@ server.app.use(
             '-',
             tokens['response-time'](req, res),
             'ms',
-        ].join(' ');
-    }),
+        ].join(' '),
+    ),
 );
 
 server.app.use('/api', server.router);
