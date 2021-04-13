@@ -17,11 +17,11 @@ itemsRouter.get("/greeting", (_req: Request, res: Response) => {
         console.log(err);
     }
 });
-itemsRouter.get("/items/getall", ItemController.findAllMenu);
+
 // GET items
-
+itemsRouter.get("/items/getall", ItemController.findAllMenu);
 // GET items/:id
-
+itemsRouter.get("/items/get", ItemController.findMenu);
 // POST items
 
 // PUT items/:id

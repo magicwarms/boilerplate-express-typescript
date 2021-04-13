@@ -11,7 +11,7 @@ dotenv.config();
  * App Variables
  */
 if (!process.env.APP_PORT) {
-    console.log(`Server exited`);
+    console.log(`Server exit`);
     process.exit(1);
 }
 
