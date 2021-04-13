@@ -14,7 +14,7 @@ export const findAllMenu = async (_req: Request, res: Response, next: NextFuncti
     }
 };
 
-export const findMenu = async (req: Request, res: Response, next: NextFunction) => {
+export const findMenu = (req: Request, res: Response, next: NextFunction) => {
     try {
         const menuId: string = String(req.query.id);
         if (!menuId)
@@ -23,8 +23,7 @@ export const findMenu = async (req: Request, res: Response, next: NextFunction) 
                 data: null,
                 message: "Menu ID is required",
             });
-        const findItem = await ItemService.find(menuId);
-        console.log(findItem);
+        const findItem = ItemService.findMenu(menuId);
         if (!findItem) {
             return res.status(200).json({
                 success: true,
@@ -37,6 +36,30 @@ export const findMenu = async (req: Request, res: Response, next: NextFunction) 
             data: findItem,
             message: "Menu data found",
         });
+    } catch (err) {
+        next(err);
+    }
+};
+
+export const updateOrStoreMenu = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const menuId = req.body.id;
+        if (!menuId) {
+            const menuBody = req.body;
+            const storeMenu = ItemService.createMenu(menuBody);
+            if (!storeMenu) {
+                return res.status(500).json({
+                    success: false,
+                    data: null,
+                    message: "Menu data not successfully saved",
+                });
+            }
+            return res.status(200).json({
+                success: true,
+                data: null,
+                message: "Menu data successfully saved",
+            });
+        }
     } catch (err) {
         next(err);
     }

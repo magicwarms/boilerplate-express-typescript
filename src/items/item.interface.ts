@@ -5,7 +5,3 @@ export interface BaseItem {
     description: string;
     image: string;
 }
-
-// export interface Item extends BaseItem {
-//     id: string;
-// }

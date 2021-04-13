@@ -35,14 +35,14 @@ let items: BaseItem[] = [
  */
 
 export const findAllMenu = async (): Promise<BaseItem[]> => Object.values(items);
-export const find = (id: string): BaseItem | null => {
+export const findMenu = (id: string): BaseItem | null => {
     const findItem = items.find((item) => {
         return item.id === id;
     });
     if (!findItem) return null;
     return findItem;
 };
-export const create = async (newItem: BaseItem): Promise<BaseItem> => {
+export const createMenu = (newItem: BaseItem): BaseItem => {
     const id: string = v4();
     newItem.id = id;
     items.push(newItem);

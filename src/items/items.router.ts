@@ -23,7 +23,7 @@ itemsRouter.get("/items/getall", ItemController.findAllMenu);
 // GET items/:id
 itemsRouter.get("/items/get", ItemController.findMenu);
 // POST items
-
+itemsRouter.post("/items/store", ItemController.updateOrStoreMenu);
 // PUT items/:id
 
 // DELETE items/:id
