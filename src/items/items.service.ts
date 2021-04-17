@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 /**
  * In-Memory Store
  */
+
 let items: BaseItem[] = [
     {
         id: "65125c63-e36e-4366-85bc-de99c168c4a9",
@@ -44,25 +45,29 @@ export const findMenu = (id: string): BaseItem | null => {
 };
 export const createMenu = (newItem: BaseItem): BaseItem => {
     const id: string = v4();
+    items.push({
+        id,
+        ...newItem,
+    });
     newItem.id = id;
-    items.push(newItem);
-
     return newItem;
 };
-// export const update = async (id: string, itemUpdate: BaseItem): Promise<BaseItem | null> => {
-//     const item = await find(id);
-
-//     if (!item) return null;
-
-//     items[id] = { id, ...itemUpdate };
-
-//     return items[id];
-// };
-// export const remove = async (id: string): Promise<null | void> => {
-//     const item = await find(id);
-
-//     if (!item) return null;
-
-//     delete items[id];
-//     return;
-// };
+export const updateMenu = (itemUpdate: BaseItem): BaseItem | null => {
+    if (!itemUpdate.id) return null;
+    const item = findMenu(itemUpdate.id);
+    if (!item) return null;
+    items.forEach((menu, index) => {
+        if (menu.id === item.id) items.splice(index, 1);
+    });
+    const updatedItem = { ...itemUpdate };
+    items.push(updatedItem);
+    return updatedItem;
+};
+export const deleteMenu = (id: string): null | void => {
+    const item = findMenu(id);
+    if (!item) return null;
+    items.forEach((menu, index) => {
+        if (menu.id === item.id) items.splice(index, 1);
+    });
+    return;
+};

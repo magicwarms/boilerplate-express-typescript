@@ -25,5 +25,6 @@ itemsRouter.get("/items/get", ItemController.findMenu);
 // POST items
 itemsRouter.post("/items/store", ItemController.updateOrStoreMenu);
 // PUT items/:id
-
+itemsRouter.put("/items/update", ItemController.updateOrStoreMenu);
 // DELETE items/:id
+itemsRouter.delete("/items/delete", ItemController.deleteMenu);
