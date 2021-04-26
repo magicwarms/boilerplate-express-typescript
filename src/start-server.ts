@@ -7,6 +7,7 @@ import cors from "cors";
 import helmet from "helmet";
 import { itemsRouter } from "./items/items.router";
 import { Server } from "node:http";
+import { rateLimiter, speedLimiter } from "./utilities/rateSpeedLimiter";
 dotenv.config();
 
 /**
@@ -38,7 +39,7 @@ app.use(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/v1", itemsRouter);
+app.use("/api/v1", rateLimiter, speedLimiter, itemsRouter);
 // handle 404
 app.use((_req: Request, res: Response) => {
     return res.status(404).json({
