@@ -1,56 +1,51 @@
+import cluster from "cluster";
+import os from "os";
+import startServer from "./start-server";
+
+const numCPUS = os.cpus().length;
+
 /**
- * Required External Modules
+ * Setup database connection here
  */
-import * as dotenv from "dotenv";
-import express, { NextFunction, Request, Response } from "express";
-import cors from "cors";
-import helmet from "helmet";
-import { itemsRouter } from "./items/items.router";
-dotenv.config();
+
 /**
- * App Variables
+ * Setup server connection here
  */
-if (!process.env.APP_PORT) {
-    console.log(`Server exit`);
-    process.exit(1);
+function startServerCluster() {
+    console.info("Production/Staging server mode started!");
+    // Activate cluster for production mode
+    if (cluster.isMaster) {
+        console.info(`Master ${process.pid} is running`);
+        for (let i = 0; i < numCPUS; i += 1) {
+            cluster.fork();
+        }
+        cluster.on("exit", (worker, code) => {
+            // If cluster crashed, start new cluster connection
+            if (code !== 0 && !worker.exitedAfterDisconnect) {
+                console.warn("Cluster crashed, starting new cluster");
+                cluster.fork();
+            }
+        });
+    } else {
+        startServer()
+            .then()
+            .catch((err) => console.error(err));
+    }
 }
 
-const PORT: number = parseInt(process.env.APP_PORT as string, 10);
-const app = express();
+function startServerDevelopment() {
+    console.info("Development server mode started!");
+    // activate if development mode
+    startServer()
+        .then()
+        .catch((err) => console.error(err));
+}
+
 /**
- *  App Configuration
+ * Start server
  */
-app.use(helmet());
-app.use(
-    cors({
-        origin: "*",
-        optionsSuccessStatus: 200,
-        methods: ["GET", "POST", "PUT", "DELETE"],
-    })
-);
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use("/api/v1", itemsRouter);
-// handle 404
-app.use((_req: Request, res: Response) => {
-    return res.status(404).json({
-        success: true,
-        data: {},
-        message: "API route not found",
-    });
-});
-// handle 500 Any error
-app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-    console.error(err);
-    return res.status(500).json({
-        success: false,
-        data: {},
-        message: `Error! (${err.message})`,
-    });
-});
-/**
- * Server Activation
- */
-app.listen(PORT, () => {
-    console.log(`Server started and listening on port ${PORT}`);
-});
+if (process.env.APP_ENV === "development") {
+    startServerDevelopment();
+} else {
+    startServerCluster();
+}

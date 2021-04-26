@@ -162,8 +162,8 @@
         "affectsGlobalScope": true
       },
       "./node_modules/@types/node/globals.d.ts": {
-        "version": "25b4a0c4fab47c373ee49df4c239826ee3430019fc0c1b5e59edc3e398b7468d",
-        "signature": "25b4a0c4fab47c373ee49df4c239826ee3430019fc0c1b5e59edc3e398b7468d",
+        "version": "583b4bd4e441916be4bf152ee323c4ffa6e178fd25df2ee2215ef05c7feb5ad4",
+        "signature": "583b4bd4e441916be4bf152ee323c4ffa6e178fd25df2ee2215ef05c7feb5ad4",
         "affectsGlobalScope": true
       },
       "./node_modules/@types/node/async_hooks.d.ts": {
@@ -232,8 +232,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/http.d.ts": {
-        "version": "1f08bd8305d4a789a68f71ab622156dfff993aa51a2aa58b9ccf166cc6f9fcf7",
-        "signature": "1f08bd8305d4a789a68f71ab622156dfff993aa51a2aa58b9ccf166cc6f9fcf7",
+        "version": "37eed30fc8318b8ac76eac6f41d0758a9d0bffd8f3ff353e3ad0f8717dd08d92",
+        "signature": "37eed30fc8318b8ac76eac6f41d0758a9d0bffd8f3ff353e3ad0f8717dd08d92",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/http2.d.ts": {
@@ -277,8 +277,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/process.d.ts": {
-        "version": "06c004006016a51c4d1855527a523562c329dc44c473931c65f10373281f730e",
-        "signature": "06c004006016a51c4d1855527a523562c329dc44c473931c65f10373281f730e",
+        "version": "fcb95c45150c717706119f12f2a3639d51baa041cd5bb441eb8501e04b52c501",
+        "signature": "fcb95c45150c717706119f12f2a3639d51baa041cd5bb441eb8501e04b52c501",
         "affectsGlobalScope": true
       },
       "./node_modules/@types/node/punycode.d.ts": {
@@ -302,8 +302,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/stream.d.ts": {
-        "version": "d84300d886b45a198c346158e4ff7ae361cc7bc1c3deab44afb3db7de56b5d25",
-        "signature": "d84300d886b45a198c346158e4ff7ae361cc7bc1c3deab44afb3db7de56b5d25",
+        "version": "74594bec8a9fa1a2cd40268f9ab95d0c44b6080345da6e8b913939d19b1d57ae",
+        "signature": "74594bec8a9fa1a2cd40268f9ab95d0c44b6080345da6e8b913939d19b1d57ae",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/string_decoder.d.ts": {
@@ -446,6 +446,21 @@
         "signature": "2c84b2652f6de696843f8af0f2fd90df891c689ce8451e364ad522a1993d0d54",
         "affectsGlobalScope": false
       },
+      "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts": {
+        "version": "ffd8ba5eabdb07b9d9100dbf3c61692bdea60d34b922f7abb47885999693490d",
+        "signature": "ffd8ba5eabdb07b9d9100dbf3c61692bdea60d34b922f7abb47885999693490d",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts": {
+        "version": "f0d4a967a554c2ab8cf4596773590da04037df282ff1550600f1191b8a41bf70",
+        "signature": "f0d4a967a554c2ab8cf4596773590da04037df282ff1550600f1191b8a41bf70",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts": {
+        "version": "c3534041f1905a263518f1d26c5648ca3716cc16b8a605e390e06795037013ae",
+        "signature": "c3534041f1905a263518f1d26c5648ca3716cc16b8a605e390e06795037013ae",
+        "affectsGlobalScope": false
+      },
       "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts": {
         "version": "f7681e9f78636bfbbaa5264c6ceec2a150629088daf5e0aed21f52256cb6302a",
         "signature": "f7681e9f78636bfbbaa5264c6ceec2a150629088daf5e0aed21f52256cb6302a",
@@ -502,13 +517,13 @@
         "affectsGlobalScope": false
       },
       "./node_modules/helmet/dist/index.d.ts": {
-        "version": "8d5af6172de9f560d164da95ec7dd7238647230d43577aa6b487fc579e0debd7",
-        "signature": "8d5af6172de9f560d164da95ec7dd7238647230d43577aa6b487fc579e0debd7",
+        "version": "d2792e5f63d1846b9c65b97292be6ec1fabab76f8270595cb873dfa85959e1be",
+        "signature": "d2792e5f63d1846b9c65b97292be6ec1fabab76f8270595cb873dfa85959e1be",
         "affectsGlobalScope": false
       },
       "./src/items/item.interface.ts": {
-        "version": "43f4b446dd870f035e021c922ace62fa827ae57007f08a460a1f838937bff800",
-        "signature": "967a3af1fd22b8fe14a1c5ed6f7ba725b406a5a2b8e1465526d272abc845e05b",
+        "version": "0782923ddb0cac720bef79a45747b53952f30db48e4ca2b123a76d2ff4da2793",
+        "signature": "0782923ddb0cac720bef79a45747b53952f30db48e4ca2b123a76d2ff4da2793",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/uuid/index.d.ts": {
@@ -517,23 +532,28 @@
         "affectsGlobalScope": false
       },
       "./src/items/items.service.ts": {
-        "version": "7c8d23f9c49b0fd4146cbd3c48f19634a7120c5a2220bdc5fafa8e18b3e1cbc9",
-        "signature": "010a7be963481bcc6b7559fad040b8487309bb2d7663dbe67c4b39c2a31d8fe0",
+        "version": "62c310d9ab74e8ea54d60f940593add80ba823e38d1b0df1437d871af53aa5cc",
+        "signature": "518b1f69dca05d757ab26baeb95eb9f91f4d102a37e150b651b346ca51c77b94",
         "affectsGlobalScope": false
       },
       "./src/items/items.controller.ts": {
-        "version": "d6246cb43ea50bea9f7ededfea88f0b2c5a01b59878cef749e303b369cfea676",
-        "signature": "a8638ec77cfd5e6a8a369f32000f627dd609f19445eb9a2e9c9b29289df99d78",
+        "version": "6ccea9520f736f121343df06b681ca3a88d820cea54e776d05d25365f2f920ab",
+        "signature": "346f52cc4371810230b274c8e4fa100590ecd2d4ffd94b80d11954dd8795a934",
         "affectsGlobalScope": false
       },
       "./src/items/items.router.ts": {
-        "version": "5c52713f7e4d8b8e03597bee2288367d22c967181a50606f9dd14bac47060b34",
-        "signature": "08b2ccc7ed90bd3df85551cbce90a0fc35a13238dd7a1ce67ee09779a252e56d",
+        "version": "668e4161b2518616e65b5b2392f3b4d8dd4b78fa34c7dec5a80c3e06faa47b99",
+        "signature": "4df1bf473fc9db63801b70e3c46b4983997a9ec566abccca41938ba845699804",
+        "affectsGlobalScope": false
+      },
+      "./src/start-server.ts": {
+        "version": "54f33e2f38f4a10ec67cac7c3a0f94068fb0a7ea52cec5891f30cc1fcb6352f8",
+        "signature": "4b5a82ce8d874c4f33671e8b85e671b6a4211ea9419eefded29cd07189d7621d",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "d67b7c68da7b0aab560d3073071141ee9163880bbf20c7c6d9ea5e81d8876343",
-        "signature": "00316e779bb16e52d58ebe243051bc85fe123e66577a482f57c290a6f2e1a779",
+        "version": "272426c2f98178e07c87c8c76303b14deb2327d5beebce8a43f01afb32e92d59",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/strip-bom/index.d.ts": {
@@ -557,6 +577,7 @@
       "removeComments": true,
       "strict": true,
       "noImplicitAny": true,
+      "alwaysStrict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "esModuleInterop": true,
@@ -831,6 +852,9 @@
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/helmet/dist/middlewares/content-security-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts",
         "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts",
         "./node_modules/helmet/dist/middlewares/origin-agent-cluster/index.d.ts",
         "./node_modules/helmet/dist/middlewares/referrer-policy/index.d.ts",
@@ -846,6 +870,15 @@
       "./node_modules/helmet/dist/middlewares/content-security-policy/index.d.ts": [
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
       ],
       "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts": [
         "./node_modules/@types/node/http.d.ts"
@@ -881,11 +914,9 @@
         "./node_modules/@types/node/http.d.ts"
       ],
       "./src/index.ts": [
-        "./node_modules/@types/cors/index.d.ts",
-        "./node_modules/@types/express/index.d.ts",
-        "./node_modules/dotenv/types/index.d.ts",
-        "./node_modules/helmet/dist/index.d.ts",
-        "./src/items/items.router.ts"
+        "./node_modules/@types/node/cluster.d.ts",
+        "./node_modules/@types/node/os.d.ts",
+        "./src/start-server.ts"
       ],
       "./src/items/items.controller.ts": [
         "./node_modules/@types/express/index.d.ts",
@@ -898,6 +929,14 @@
       "./src/items/items.service.ts": [
         "./node_modules/@types/uuid/index.d.ts",
         "./src/items/item.interface.ts"
+      ],
+      "./src/start-server.ts": [
+        "./node_modules/@types/cors/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/http.d.ts",
+        "./node_modules/dotenv/types/index.d.ts",
+        "./node_modules/helmet/dist/index.d.ts",
+        "./src/items/items.router.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1166,6 +1205,9 @@
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/helmet/dist/middlewares/content-security-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts",
+        "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts",
         "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts",
         "./node_modules/helmet/dist/middlewares/origin-agent-cluster/index.d.ts",
         "./node_modules/helmet/dist/middlewares/referrer-policy/index.d.ts",
@@ -1181,6 +1223,15 @@
       "./node_modules/helmet/dist/middlewares/content-security-policy/index.d.ts": [
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
+      ],
+      "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts": [
+        "./node_modules/@types/node/http.d.ts"
       ],
       "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts": [
         "./node_modules/@types/node/http.d.ts"
@@ -1287,6 +1338,9 @@
       "./node_modules/dotenv/types/index.d.ts",
       "./node_modules/helmet/dist/index.d.ts",
       "./node_modules/helmet/dist/middlewares/content-security-policy/index.d.ts",
+      "./node_modules/helmet/dist/middlewares/cross-origin-embedder-policy/index.d.ts",
+      "./node_modules/helmet/dist/middlewares/cross-origin-opener-policy/index.d.ts",
+      "./node_modules/helmet/dist/middlewares/cross-origin-resource-policy/index.d.ts",
       "./node_modules/helmet/dist/middlewares/expect-ct/index.d.ts",
       "./node_modules/helmet/dist/middlewares/origin-agent-cluster/index.d.ts",
       "./node_modules/helmet/dist/middlewares/referrer-policy/index.d.ts",
@@ -1334,7 +1388,8 @@
       "./src/items/item.interface.ts",
       "./src/items/items.controller.ts",
       "./src/items/items.router.ts",
-      "./src/items/items.service.ts"
+      "./src/items/items.service.ts",
+      "./src/start-server.ts"
     ]
   },
   "version": "4.2.4"
