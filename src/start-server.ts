@@ -83,8 +83,13 @@ function setupCloseOnExit(server: Server) {
  * Server Activation
  */
 function startServer() {
+    const NodeAppInstanceEnvValue: number = parseInt(process.env.NODE_APP_INSTANCE as string, 10);
+    const nodeAppInstancePort =
+        process.env.NODE_ENV === "production" || process.env.NODE_ENV === "staging"
+            ? PORT + NodeAppInstanceEnvValue
+            : PORT;
     return new Promise((resolve) => {
-        const server = app.listen(PORT, () => {
+        const server = app.listen(nodeAppInstancePort, () => {
             console.info(`Listening on port ${PORT} at ${currentTime}`);
             // this ensures that we properly close the server when the program exists
             setupCloseOnExit(server);

@@ -1,11 +1,6 @@
 {
   "program": {
     "fileInfos": {
-      "./node_modules/typescript/lib/lib.es6.d.ts": {
-        "version": "721cec59c3fef87aaf480047d821fb758b3ec9482c4129a54631e6e25e432a31",
-        "signature": "721cec59c3fef87aaf480047d821fb758b3ec9482c4129a54631e6e25e432a31",
-        "affectsGlobalScope": false
-      },
       "./node_modules/typescript/lib/lib.es5.d.ts": {
         "version": "b3584bc5798ed422ce2516df360ffa9cf2d80b5eae852867db9ba3743145f895",
         "signature": "b3584bc5798ed422ce2516df360ffa9cf2d80b5eae852867db9ba3743145f895",
@@ -160,6 +155,11 @@
         "version": "506b80b9951c9381dc5f11897b31fca5e2a65731d96ddefa19687fbc26b23c6e",
         "signature": "506b80b9951c9381dc5f11897b31fca5e2a65731d96ddefa19687fbc26b23c6e",
         "affectsGlobalScope": true
+      },
+      "./node_modules/typescript/lib/lib.es2017.full.d.ts": {
+        "version": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
+        "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
+        "affectsGlobalScope": false
       },
       "./node_modules/@types/node/globals.d.ts": {
         "version": "583b4bd4e441916be4bf152ee323c4ffa6e178fd25df2ee2215ef05c7feb5ad4",
@@ -546,14 +546,29 @@
         "signature": "4df1bf473fc9db63801b70e3c46b4983997a9ec566abccca41938ba845699804",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/express-rate-limit/index.d.ts": {
+        "version": "089631249f41a9b676622f64514afd9a74fdf50a8cfe98dffaa62ecb9085b27c",
+        "signature": "089631249f41a9b676622f64514afd9a74fdf50a8cfe98dffaa62ecb9085b27c",
+        "affectsGlobalScope": true
+      },
+      "./node_modules/@types/express-slow-down/index.d.ts": {
+        "version": "708e47398ae88ea12f8991d6a07b6609176ad5e882a309edf3a7a9b20068ac49",
+        "signature": "708e47398ae88ea12f8991d6a07b6609176ad5e882a309edf3a7a9b20068ac49",
+        "affectsGlobalScope": false
+      },
+      "./src/utilities/ratespeedlimiter.ts": {
+        "version": "790334f4904433a5a136882680319510d9302c3b7b5f6bc2b105642a8122d4aa",
+        "signature": "d7b492f7dd4d1ae4defa199f50aa9bfe309a244bc02f369a8008d323675db8c4",
+        "affectsGlobalScope": false
+      },
       "./src/start-server.ts": {
-        "version": "54f33e2f38f4a10ec67cac7c3a0f94068fb0a7ea52cec5891f30cc1fcb6352f8",
-        "signature": "4b5a82ce8d874c4f33671e8b85e671b6a4211ea9419eefded29cd07189d7621d",
+        "version": "c4606c6d90f2a09bf2af460992bf26c43e12597d196bac4850a72275483ad08a",
+        "signature": "e056ec019725a241658f6c3c0573bf3f06cdc3a54751d9b2268d251bf9ee2662",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
         "version": "272426c2f98178e07c87c8c76303b14deb2327d5beebce8a43f01afb32e92d59",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "signature": "00316e779bb16e52d58ebe243051bc85fe123e66577a482f57c290a6f2e1a779",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/strip-bom/index.d.ts": {
@@ -569,8 +584,10 @@
     },
     "options": {
       "incremental": true,
-      "target": 2,
+      "target": 4,
       "module": 1,
+      "declaration": true,
+      "declarationMap": true,
       "outDir": "./dist",
       "rootDir": "./src",
       "tsBuildInfoFile": "./version",
@@ -580,7 +597,10 @@
       "alwaysStrict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
+      "moduleResolution": 2,
       "esModuleInterop": true,
+      "inlineSourceMap": true,
+      "inlineSources": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
       "project": "./",
@@ -599,12 +619,18 @@
       "./node_modules/@types/cors/index.d.ts": [
         "./node_modules/@types/node/http.d.ts"
       ],
+      "./node_modules/@types/express-rate-limit/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts"
+      ],
       "./node_modules/@types/express-serve-static-core/index.d.ts": [
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/qs/index.d.ts",
         "./node_modules/@types/range-parser/index.d.ts"
+      ],
+      "./node_modules/@types/express-slow-down/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts"
       ],
       "./node_modules/@types/express/index.d.ts": [
         "./node_modules/@types/body-parser/index.d.ts",
@@ -936,7 +962,13 @@
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/dotenv/types/index.d.ts",
         "./node_modules/helmet/dist/index.d.ts",
-        "./src/items/items.router.ts"
+        "./src/items/items.router.ts",
+        "./src/utilities/ratespeedlimiter.ts"
+      ],
+      "./src/utilities/ratespeedlimiter.ts": [
+        "./node_modules/@types/express-rate-limit/index.d.ts",
+        "./node_modules/@types/express-slow-down/index.d.ts",
+        "./node_modules/@types/express/index.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -952,12 +984,18 @@
       "./node_modules/@types/cors/index.d.ts": [
         "./node_modules/@types/node/http.d.ts"
       ],
+      "./node_modules/@types/express-rate-limit/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts"
+      ],
       "./node_modules/@types/express-serve-static-core/index.d.ts": [
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/qs/index.d.ts",
         "./node_modules/@types/range-parser/index.d.ts"
+      ],
+      "./node_modules/@types/express-slow-down/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts"
       ],
       "./node_modules/@types/express/index.d.ts": [
         "./node_modules/@types/body-parser/index.d.ts",
@@ -1274,13 +1312,21 @@
       ],
       "./src/items/items.service.ts": [
         "./src/items/item.interface.ts"
+      ],
+      "./src/utilities/ratespeedlimiter.ts": [
+        "./node_modules/@types/express-rate-limit/index.d.ts",
+        "./node_modules/@types/express-serve-static-core/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/qs/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
       "./node_modules/@types/body-parser/index.d.ts",
       "./node_modules/@types/connect/index.d.ts",
       "./node_modules/@types/cors/index.d.ts",
+      "./node_modules/@types/express-rate-limit/index.d.ts",
       "./node_modules/@types/express-serve-static-core/index.d.ts",
+      "./node_modules/@types/express-slow-down/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
       "./node_modules/@types/mime/index.d.ts",
       "./node_modules/@types/node/assert.d.ts",
@@ -1367,6 +1413,7 @@
       "./node_modules/typescript/lib/lib.es2016.array.include.d.ts",
       "./node_modules/typescript/lib/lib.es2016.d.ts",
       "./node_modules/typescript/lib/lib.es2017.d.ts",
+      "./node_modules/typescript/lib/lib.es2017.full.d.ts",
       "./node_modules/typescript/lib/lib.es2017.intl.d.ts",
       "./node_modules/typescript/lib/lib.es2017.object.d.ts",
       "./node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
@@ -1380,7 +1427,6 @@
       "./node_modules/typescript/lib/lib.es2018.regexp.d.ts",
       "./node_modules/typescript/lib/lib.es2020.bigint.d.ts",
       "./node_modules/typescript/lib/lib.es5.d.ts",
-      "./node_modules/typescript/lib/lib.es6.d.ts",
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./node_modules/typescript/lib/lib.scripthost.d.ts",
       "./node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
@@ -1389,7 +1435,8 @@
       "./src/items/items.controller.ts",
       "./src/items/items.router.ts",
       "./src/items/items.service.ts",
-      "./src/start-server.ts"
+      "./src/start-server.ts",
+      "./src/utilities/ratespeedlimiter.ts"
     ]
   },
   "version": "4.2.4"
